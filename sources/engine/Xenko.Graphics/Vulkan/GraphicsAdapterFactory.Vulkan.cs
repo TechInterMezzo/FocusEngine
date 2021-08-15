@@ -209,7 +209,7 @@ namespace Xenko.Graphics
                     {
                         sType = VkStructureType.DebugReportCallbackCreateInfoEXT,
                         flags = VkDebugReportFlagsEXT.Error | VkDebugReportFlagsEXT.Warning /* | VkDebugReportFlagsEXT.PerformanceWarningEXT | VkDebugReportFlagsEXT.InformationEXT | VkDebugReportFlagsEXT.DebugEXT*/,
-                        pfnCallback = Marshal.GetFunctionPointerForDelegate(debugReport)
+                        pfnCallback = (delegate* unmanaged<Vortice.Vulkan.VkDebugReportFlagsEXT, Vortice.Vulkan.VkDebugReportObjectTypeEXT, ulong, nuint, int, byte*, byte*, void*, uint>)Marshal.GetFunctionPointerForDelegate(debugReport)
                     };
                     createDebugReportCallback(NativeInstance, ref createInfo, null, out debugReportCallback);
                     Marshal.FreeHGlobal(createDebugReportCallbackName);
