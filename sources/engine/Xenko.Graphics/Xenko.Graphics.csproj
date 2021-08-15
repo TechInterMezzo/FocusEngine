@@ -61,7 +61,7 @@
     <PackageReference Include="SharpDX.Direct3D11" Version="4.2.0" Condition="'$(XenkoPlatform)' == 'Windows' Or '$(XenkoPlatform)' == 'UWP'" />
     <PackageReference Include="SharpDX.Direct3D12" Version="4.2.0" Condition="'$(XenkoPlatform)' == 'Windows'" />
     <PackageReference Include="SharpDX.D3DCompiler" Version="4.2.0" Condition="'$(XenkoPlatform)' == 'Windows' Or '$(XenkoPlatform)' == 'UWP'" />
-    <PackageReference Include="Vortice.Vulkan" Version="1.2.167" Condition="'$(XenkoPlatform)' == 'Windows' Or '$(XenkoPlatform)' == 'Linux' Or '$(XenkoPlatform)' == 'macOS'" />
+    <PackageReference Include="Vortice.Vulkan" Version="1.2.170.2" Condition="'$(XenkoPlatform)' == 'Windows' Or '$(XenkoPlatform)' == 'Linux' Or '$(XenkoPlatform)' == 'macOS'" />
     <PackageReference Include="Stride.OpenTK" Version="1.0.3" Condition="'$(XenkoPlatform)' == 'Windows' Or '$(XenkoPlatform)' == 'Linux' Or '$(XenkoPlatform)' == 'iOS' Or '$(XenkoPlatform)' == 'Android'" />
     <PackageReference Include="Stride.SharpFont" Version="1.0.0" />
   </ItemGroup>

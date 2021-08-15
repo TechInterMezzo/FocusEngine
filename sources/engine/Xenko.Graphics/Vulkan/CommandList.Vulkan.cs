@@ -222,7 +222,7 @@ namespace Xenko.Graphics
             var viewportCopy = Viewport;
             if (viewportDirty)
             {
-                vkCmdSetViewport(currentCommandList.NativeCommandBuffer, 0, 1, (Vortice.Mathematics.Viewport*)&viewportCopy);
+                vkCmdSetViewport(currentCommandList.NativeCommandBuffer, 0, 1, (Vortice.Vulkan.VkViewport*)&viewportCopy);
                 viewportDirty = false;
             }
 
