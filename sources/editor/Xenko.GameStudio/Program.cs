@@ -68,7 +68,7 @@ namespace Xenko.GameStudio
         {
             // wait, are we already running?
             int waitToClose = 16;
-            while (Process.GetProcessesByName("Focus.GameStudio").Length > 1)
+            while (Process.GetProcessesByName("Xenko.GameStudio").Length > 1)
             {
                 if (waitToClose-- <= 0)
                 {
@@ -126,18 +126,6 @@ namespace Xenko.GameStudio
                         // TODO: RenderDoc is not working here (when not in debug)
                         GameStudioPreviewService.DisablePreview = true;
                         renderDocManager = new RenderDocManager();
-                    }
-                    else if (args[i] == "/Reattach")
-                    {
-                        var debuggerProcessId = int.Parse(args[++i]);
-
-                        if (!System.Diagnostics.Debugger.IsAttached)
-                        {
-                            using (var debugger = VisualStudioDebugger.GetByProcess(debuggerProcessId))
-                            {
-                                debugger?.Attach();
-                            }
-                        }
                     }
                     else if (args[i] == "/RecordEffects")
                     {

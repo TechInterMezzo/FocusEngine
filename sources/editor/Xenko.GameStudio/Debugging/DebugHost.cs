@@ -3,8 +3,7 @@
 
 using System;
 using System.Diagnostics;
-using System.ServiceModel;
-
+using ServiceWire.NamedPipes;
 using Xenko.Core.Diagnostics;
 using Xenko.Core.VisualStudio;
 using Xenko.Debugger.Target;
@@ -16,56 +15,46 @@ namespace Xenko.GameStudio.Debugging
     /// </summary>
     class DebugHost : IDisposable
     {
-        public ServiceHost ServiceHost { get; private set; }
+        public NpHost ServiceHost { get; private set; }
         public GameDebuggerHost GameHost { get; private set; }
 
         public void Start(string workingDirectory, Process debuggerProcess, LoggerResult logger)
         {
             var gameHostAssembly = typeof(GameDebuggerTarget).Assembly.Location;
 
-            using (var debugger = debuggerProcess != null ? VisualStudioDebugger.GetByProcess(debuggerProcess.Id) : null)
+            var address = "Xenko/Debugger/" + Guid.NewGuid();
+            var arguments = $"--host=\"{address}\"";
+
+            var startInfo = new ProcessStartInfo
             {
-                var address = "net.pipe://localhost/" + Guid.NewGuid();
-                var arguments = $"--host=\"{address}\"";
+                FileName = gameHostAssembly,
+                Arguments = arguments,
+                WorkingDirectory = workingDirectory,
+                CreateNoWindow = true,
+                UseShellExecute = false,
+                RedirectStandardOutput = true,
+                RedirectStandardError = true,
+            };
 
-                // Child process should wait for a debugger to be attached
-                if (debugger != null)
-                    arguments += " --wait-debugger-attach";
+            // Start ServiceWire pipe
+            var gameDebuggerHost = new GameDebuggerHost(logger);
+            ServiceHost = new NpHost(address, null, null);
+            ServiceHost.AddService<IGameDebuggerHost>(gameDebuggerHost);
+            ServiceHost.Open();
 
-                var startInfo = new ProcessStartInfo
-                {
-                    FileName = gameHostAssembly,
-                    Arguments = arguments,
-                    WorkingDirectory = workingDirectory,
-                    CreateNoWindow = true,
-                    UseShellExecute = false,
-                    RedirectStandardOutput = true,
-                    RedirectStandardError = true,
-                };
+            var process = new Process { StartInfo = startInfo };
+            process.Start();
+            process.BeginOutputReadLine();
+            process.BeginErrorReadLine();
 
-                // Start WCF pipe
-                var gameDebuggerHost = new GameDebuggerHost(logger);
-                ServiceHost = new ServiceHost(gameDebuggerHost);
-                ServiceHost.AddServiceEndpoint(typeof(IGameDebuggerHost), new NetNamedPipeBinding(NetNamedPipeSecurityMode.None) { MaxReceivedMessageSize = int.MaxValue }, address);
-                ServiceHost.Open();
-
-                var process = new Process { StartInfo = startInfo };
-                process.Start();
-                process.BeginOutputReadLine();
-                process.BeginErrorReadLine();
-
-                // Attach debugger
-                debugger?.AttachToProcess(process.Id);
-
-                GameHost = gameDebuggerHost;
-            }
+            GameHost = gameDebuggerHost;
         }
 
         public void Stop()
         {
             if (ServiceHost != null)
             {
-                ServiceHost.Abort();
+                ServiceHost.Close();
                 ServiceHost = null;
             }
         }

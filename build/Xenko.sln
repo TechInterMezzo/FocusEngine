@@ -11,28 +11,18 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "00-Targets.Private", "00-Targets.Private", "{97978864-95DD-43A6-9159-AA1C881BE99F}"
 	ProjectSection(SolutionItems) = preProject
 		..\store.config = ..\store.config
-		..\sources\targets\Xenko.Core.Android.CSharp.targets = ..\sources\targets\Xenko.Core.Android.CSharp.targets
-		..\sources\targets\Xenko.Core.CoreCLR.Cpp.targets = ..\sources\targets\Xenko.Core.CoreCLR.Cpp.targets
-		..\sources\targets\Xenko.Core.CoreCLR.CSharp.targets = ..\sources\targets\Xenko.Core.CoreCLR.CSharp.targets
-		..\sources\targets\Xenko.Core.Cpp.targets = ..\sources\targets\Xenko.Core.Cpp.targets
-		..\sources\targets\Xenko.Core.CSharp.targets = ..\sources\targets\Xenko.Core.CSharp.targets
-		..\sources\targets\Xenko.Core.GlobalSettings.targets = ..\sources\targets\Xenko.Core.GlobalSettings.targets
-		..\sources\targets\Xenko.Core.iOS.CSharp.targets = ..\sources\targets\Xenko.Core.iOS.CSharp.targets
 		..\sources\targets\Xenko.Core.PostSettings.Dependencies.targets = ..\sources\targets\Xenko.Core.PostSettings.Dependencies.targets
-		..\sources\targets\Xenko.Core.PostSettings.targets = ..\sources\targets\Xenko.Core.PostSettings.targets
-		..\sources\targets\Xenko.Core.PreSettings.targets = ..\sources\targets\Xenko.Core.PreSettings.targets
+		..\sources\targets\Xenko.Core.props = ..\sources\targets\Xenko.Core.props
 		..\sources\targets\Xenko.Core.Sign.targets = ..\sources\targets\Xenko.Core.Sign.targets
-		..\sources\targets\Xenko.Core.UWP.Cpp.targets = ..\sources\targets\Xenko.Core.UWP.Cpp.targets
-		..\sources\targets\Xenko.Core.UWP.CSharp.targets = ..\sources\targets\Xenko.Core.UWP.CSharp.targets
-		..\sources\targets\Xenko.GlobalSettings.targets = ..\sources\targets\Xenko.GlobalSettings.targets
+		..\sources\targets\Xenko.Core.targets = ..\sources\targets\Xenko.Core.targets
+		..\sources\targets\Xenko.GraphicsApi.Dev.targets = ..\sources\targets\Xenko.GraphicsApi.Dev.targets
+		..\sources\targets\Xenko.GraphicsApi.PackageReference.targets = ..\sources\targets\Xenko.GraphicsApi.PackageReference.targets
 		..\sources\native\Xenko.Native.targets = ..\sources\native\Xenko.Native.targets
-		..\sources\targets\Xenko.PostSettings.References.targets = ..\sources\targets\Xenko.PostSettings.References.targets
-		..\sources\targets\Xenko.PostSettings.targets = ..\sources\targets\Xenko.PostSettings.targets
-		..\sources\targets\Xenko.PostSettings.User.targets = ..\sources\targets\Xenko.PostSettings.User.targets
-		..\sources\targets\Xenko.PreSettings.targets = ..\sources\targets\Xenko.PreSettings.targets
-		..\sources\targets\Xenko.PreSettings.UnitTests.targets = ..\sources\targets\Xenko.PreSettings.UnitTests.targets
-		..\sources\targets\Xenko.PreSettings.User.targets = ..\sources\targets\Xenko.PreSettings.User.targets
+		..\sources\targets\Xenko.props = ..\sources\targets\Xenko.props
+		..\sources\targets\Xenko.targets = ..\sources\targets\Xenko.targets
+		..\sources\targets\Xenko.UnitTests.CrossTargeting.targets = ..\sources\targets\Xenko.UnitTests.CrossTargeting.targets
 		..\sources\targets\Xenko.UnitTests.DisableBuild.targets = ..\sources\targets\Xenko.UnitTests.DisableBuild.targets
+		..\sources\targets\Xenko.UnitTests.props = ..\sources\targets\Xenko.UnitTests.props
 		..\sources\targets\Xenko.UnitTests.targets = ..\sources\targets\Xenko.UnitTests.targets
 	EndProjectSection
 EndProject
@@ -45,8 +35,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Internals", "Internals", "{860946E4-CC77-4FDA-A4FD-3DB2A502A696}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "40-Assets", "40-Assets", "{A2A4342E-024B-4063-B10C-1DA96CA3046D}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "91-VisualStudio", "91-VisualStudio", "{E4508D15-6503-4A29-ADC4-27B3A5E99545}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "60-Editor", "60-Editor", "{5D2D3BE8-9910-45CA-8E45-95660DA4C563}"
 EndProject
@@ -66,50 +54,32 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "00-Targets.Build", "00-Targets.Build", "{0B81090E-4066-4723-A658-8AEDBEADE619}"
 	ProjectSection(SolutionItems) = preProject
 		Xenko.build = Xenko.build
-		Xenko.Core.GlobalSettings.Local.targets = Xenko.Core.GlobalSettings.Local.targets
-		Xenko.Core.PostSettings.Local.targets = Xenko.Core.PostSettings.Local.targets
-		Xenko.Core.PreSettings.Local.targets = Xenko.Core.PreSettings.Local.targets
-		Xenko.PreSettings.Local.targets = Xenko.PreSettings.Local.targets
+		Xenko.Build.props = Xenko.Build.props
+		Xenko.Build.targets = Xenko.Build.targets
+		Xenko.Core.Build.props = Xenko.Core.Build.props
+		Xenko.Core.Build.targets = Xenko.Core.Build.targets
+		Xenko.UnitTests.Build.targets = Xenko.UnitTests.Build.targets
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "30-CoreDesign", "30-CoreDesign", "{25F10A0B-7259-404C-86BE-FD2363C92F72}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xenko.GameStudio", "..\sources\editor\Xenko.GameStudio\Xenko.GameStudio.csproj", "{2FCA2D8B-B10F-4DCA-9847-4221F74BA586}"
-	ProjectSection(ProjectDependencies) = postProject
-		{BD176B28-49CD-4FAD-A430-CDBCF1C2E514} = {BD176B28-49CD-4FAD-A430-CDBCF1C2E514}
-		{550C1B7C-B7AD-46DF-ACF3-C36AEF35D5FF} = {550C1B7C-B7AD-46DF-ACF3-C36AEF35D5FF}
-		{50D1A3BB-4B41-4EF5-8D2F-3618A3B6C698} = {50D1A3BB-4B41-4EF5-8D2F-3618A3B6C698}
-	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xenko.Engine", "..\sources\engine\Xenko.Engine\Xenko.Engine.csproj", "{C121A566-555E-42B9-9B0A-1696529A9088}"
-	ProjectSection(ProjectDependencies) = postProject
-		{F2D52EDB-BC17-4243-B06D-33CD20F87A7F} = {F2D52EDB-BC17-4243-B06D-33CD20F87A7F}
-	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xenko.Graphics", "..\sources\engine\Xenko.Graphics\Xenko.Graphics.csproj", "{FB06C76A-6BB7-40BE-9AFA-FEC13B045FB5}"
-	ProjectSection(ProjectDependencies) = postProject
-		{7C67FF28-1B9E-4F13-8BDA-B833D588BC6A} = {7C67FF28-1B9E-4F13-8BDA-B833D588BC6A}
-	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Xenko.Importer.FBX", "..\sources\tools\Xenko.Importer.FBX\Xenko.Importer.FBX.vcxproj", "{0467D515-FD66-4B8A-A128-CB642C2ED03F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xenko.Core.Shaders", "..\sources\shaders\Xenko.Core.Shaders\Xenko.Core.Shaders.csproj", "{F2D52EDB-BC17-4243-B06D-33CD20F87A7F}"
-	ProjectSection(ProjectDependencies) = postProject
-		{5210FB81-B807-49BB-AF0D-31FB6A83A572} = {5210FB81-B807-49BB-AF0D-31FB6A83A572}
-	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xenko.Core.Presentation", "..\sources\presentation\Xenko.Core.Presentation\Xenko.Core.Presentation.csproj", "{47AFCC2E-E9F0-47D6-9D75-9E646546A92B}"
-	ProjectSection(ProjectDependencies) = postProject
-		{5210FB81-B807-49BB-AF0D-31FB6A83A572} = {5210FB81-B807-49BB-AF0D-31FB6A83A572}
-	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Xenko.Importer.Assimp", "..\sources\tools\Xenko.Importer.Assimp\Xenko.Importer.Assimp.vcxproj", "{C2306552-6C42-464C-8981-32FEF4F9458D}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Irony", "..\sources\shaders\Irony\Irony.csproj", "{D81F5C91-D7DB-46E5-BC99-49488FB6814C}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xenko.Games", "..\sources\engine\Xenko.Games\Xenko.Games.csproj", "{42780CBD-3FE7-48E3-BD5B-59945EA20137}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xenko.VisualStudio.Package", "..\sources\tools\Xenko.VisualStudio.Package\Xenko.VisualStudio.Package.csproj", "{0BD41ADD-2704-4A77-A9AB-15460A2ABDC6}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xenko.TextureConverter", "..\sources\tools\Xenko.TextureConverter\Xenko.TextureConverter.csproj", "{7F7BFF79-C400-435F-B359-56A2EF8956E0}"
 EndProject
@@ -126,9 +96,6 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xenko.Core", "..\sources\core\Xenko.Core\Xenko.Core.csproj", "{0E916AB7-5A6C-4820-8AB1-AA492FE66D68}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xenko.Core.Mathematics", "..\sources\core\Xenko.Core.Mathematics\Xenko.Core.Mathematics.csproj", "{1677B922-CCF0-44DE-B57E-1CDD3D2B8E8A}"
-	ProjectSection(ProjectDependencies) = postProject
-		{5210FB81-B807-49BB-AF0D-31FB6A83A572} = {5210FB81-B807-49BB-AF0D-31FB6A83A572}
-	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xenko.Core.Serialization", "..\sources\core\Xenko.Core.Serialization\Xenko.Core.Serialization.csproj", "{5210FB81-B807-49BB-AF0D-31FB6A83A572}"
 EndProject
@@ -159,23 +126,14 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xenko.Core.Assets.Editor", "..\sources\editor\Xenko.Core.Assets.Editor\Xenko.Core.Assets.Editor.csproj", "{5863574D-7A55-49BC-8E65-BABB74D8E66E}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xenko.Core.Assets.CompilerApp", "..\sources\assets\Xenko.Core.Assets.CompilerApp\Xenko.Core.Assets.CompilerApp.csproj", "{50D1A3BB-4B41-4EF5-8D2F-3618A3B6C698}"
-	ProjectSection(ProjectDependencies) = postProject
-		{8D783A73-0BE3-423E-8FF6-984125C07BFE} = {8D783A73-0BE3-423E-8FF6-984125C07BFE}
-	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xenko.FixProjectReferences", "..\sources\tools\Xenko.FixProjectReferences\Xenko.FixProjectReferences.csproj", "{7DBC5A0B-76F5-4D9E-9798-540DA214099C}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xenko.Assets.Models", "..\sources\engine\Xenko.Assets.Models\Xenko.Assets.Models.csproj", "{C904D2C6-5A15-4E0B-8432-33967E1735AA}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xenko.UI", "..\sources\engine\Xenko.UI\Xenko.UI.csproj", "{BB9DEEEF-F18C-40D8-B016-6434CC71B8C3}"
-	ProjectSection(ProjectDependencies) = postProject
-		{C121A566-555E-42B9-9B0A-1696529A9088} = {C121A566-555E-42B9-9B0A-1696529A9088}
-	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xenko.Editor", "..\sources\editor\Xenko.Editor\Xenko.Editor.csproj", "{16E02D45-5530-4617-97DC-BC3BDF77DE2C}"
-	ProjectSection(ProjectDependencies) = postProject
-		{73AA8A18-15C4-405B-BBF4-5D41C1CE44AD} = {73AA8A18-15C4-405B-BBF4-5D41C1CE44AD}
-	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xenko.Core.Design", "..\sources\core\Xenko.Core.Design\Xenko.Core.Design.csproj", "{66581DAD-70AD-4475-AE47-C6C0DF1EC5E2}"
 EndProject
@@ -186,13 +144,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xenko.Core.ProjectTemplating", "..\sources\tools\Xenko.Core.ProjectTemplating\Xenko.Core.ProjectTemplating.csproj", "{2E2382F7-9576-49F0-AE43-93AFD7DB2368}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xenko.Assets.Presentation", "..\sources\editor\Xenko.Assets.Presentation\Xenko.Assets.Presentation.csproj", "{550C1B7C-B7AD-46DF-ACF3-C36AEF35D5FF}"
-	ProjectSection(ProjectDependencies) = postProject
-		{EFD2472E-B0E1-442A-9057-BBEA2517064B} = {EFD2472E-B0E1-442A-9057-BBEA2517064B}
-	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xenko.Core.ProjectTemplating.Tests", "..\sources\tools\Xenko.Core.ProjectTemplating.Tests\Xenko.Core.ProjectTemplating.Tests.csproj", "{862C7C39-8E2B-4F18-88E9-ACD6EDF818CD}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xenko.VisualStudio.Commands", "..\sources\tools\Xenko.VisualStudio.Commands\Xenko.VisualStudio.Commands.csproj", "{E136B568-3E3F-498F-A8B4-2877B7768560}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xenko.Physics", "..\sources\engine\Xenko.Physics\Xenko.Physics.csproj", "{DD592516-B341-40FE-9100-1B0FA784A060}"
 EndProject
@@ -234,8 +187,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xenko.Core.Assets.Quantum",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xenko.VirtualReality", "..\sources\engine\Xenko.VirtualReality\Xenko.VirtualReality.csproj", "{53782603-3096-40C2-ABD3-F8F311BAE4BE}"
 EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Xenko.Core.VisualStudio", "..\sources\tools\Xenko.Core.VisualStudio\Xenko.Core.VisualStudio.shproj", "{991E796A-D1D1-48B8-B9AA-95C2744FE112}"
-EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Xenko.Core.Assets.Yaml", "..\sources\assets\Xenko.Core.Assets.Yaml\Xenko.Core.Assets.Yaml.shproj", "{FB9ED2C4-94A0-4004-A498-3F29A9D5BB5D}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xenko.Navigation", "..\sources\engine\Xenko.Navigation\Xenko.Navigation.csproj", "{FBE1FA7B-E699-4BB2-9C8F-41F4C9F3F088}"
@@ -243,8 +194,6 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xenko.PackageInstall", "..\sources\tools\Xenko.PackageInstall\Xenko.PackageInstall.csproj", "{BD176B28-49CD-4FAD-A430-CDBCF1C2E514}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xenko.Core.Tasks", "..\sources\core\Xenko.Core.Tasks\Xenko.Core.Tasks.csproj", "{7C67FF28-1B9E-4F13-8BDA-B833D588BC6A}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xenko.VisualStudio.PackageInstall", "..\sources\tools\Xenko.VisualStudio.PackageInstall\Xenko.VisualStudio.PackageInstall.csproj", "{AF6049CC-E60E-4174-9AB6-9AA282DE3A31}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xenko.Core.Translation", "..\sources\core\Xenko.Core.Translation\Xenko.Core.Translation.csproj", "{6A7B231E-36AA-4647-8C1A-FB1540ABC813}"
 EndProject
@@ -275,16 +224,10 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "72-XenkoSamples", "72-XenkoSamples", "{75608B5C-1C03-4B38-810E-14EED5165E59}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xenko.Samples.Tests", "..\samples\Tests\Xenko.Samples.Tests.csproj", "{2FC40214-A4AA-45DC-9C93-72ED800C40B0}"
-	ProjectSection(ProjectDependencies) = postProject
-		{50D1A3BB-4B41-4EF5-8D2F-3618A3B6C698} = {50D1A3BB-4B41-4EF5-8D2F-3618A3B6C698}
-	EndProjectSection
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Xenko.NuGetResolver", "..\sources\shared\Xenko.NuGetResolver\Xenko.NuGetResolver.shproj", "{00B72ED7-00E9-47F7-868D-8162027CD068}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xenko.Samples.Templates", "..\sources\editor\Xenko.Samples.Templates\Xenko.Samples.Templates.csproj", "{040F754C-17F4-4B5F-B974-93F1E39D107F}"
-	ProjectSection(ProjectDependencies) = postProject
-		{7C67FF28-1B9E-4F13-8BDA-B833D588BC6A} = {7C67FF28-1B9E-4F13-8BDA-B833D588BC6A}
-	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "fr", "fr", "{62E9A8E4-79AF-4081-84D5-FEC5A0B28598}"
 	ProjectSection(SolutionItems) = preProject
@@ -298,12 +241,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xenko.Rendering", "..\sourc
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xenko.Voxels", "..\sources\engine\Xenko.Voxels\Xenko.Voxels.csproj", "{66BE41FC-FC52-48D0-9C04-BCE8CC393020}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xenko.NuGetLoader", "..\sources\tools\Xenko.NuGetLoader\Xenko.NuGetLoader.csproj", "{7FA381C8-8EBE-4515-969D-01369CC47D0E}"
+EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xenko.Toolkit", "..\sources\tools\Xenko.Toolkit\Xenko.Toolkit.csproj", "{42F46D75-ED70-46B4-8B0F-BAB923E3AC59}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		..\sources\shared\Xenko.NuGetResolver\Xenko.NuGetResolver.projitems*{00b72ed7-00e9-47f7-868d-8162027cd068}*SharedItemsImports = 13
-		..\sources\assets\Xenko.Core.Assets.Yaml\Xenko.Core.Assets.Yaml.projitems*{0bd41add-2704-4a77-a9ab-15460a2abdc6}*SharedItemsImports = 5
 		..\sources\assets\Xenko.Core.Assets.Yaml\Xenko.Core.Assets.Yaml.projitems*{1e54a9a2-4439-4444-ae57-6d2ed3c0dc47}*SharedItemsImports = 5
 		..\sources\shared\Xenko.Core.ShellHelper\Xenko.Core.ShellHelper.projitems*{1e54a9a2-4439-4444-ae57-6d2ed3c0dc47}*SharedItemsImports = 5
 		..\sources\shared\Xenko.NuGetResolver\Xenko.NuGetResolver.projitems*{2fc40214-a4aa-45dc-9c93-72ed800c40b0}*SharedItemsImports = 5
@@ -311,15 +255,11 @@ Global
 		..\sources\editor\Xenko.PrivacyPolicy\Xenko.PrivacyPolicy.projitems*{2fca2d8b-b10f-4dca-9847-4221f74ba586}*SharedItemsImports = 5
 		..\sources\shared\Xenko.Core.ShellHelper\Xenko.Core.ShellHelper.projitems*{2fca2d8b-b10f-4dca-9847-4221f74ba586}*SharedItemsImports = 5
 		..\sources\shared\Xenko.NuGetResolver\Xenko.NuGetResolver.projitems*{2fca2d8b-b10f-4dca-9847-4221f74ba586}*SharedItemsImports = 5
-		..\sources\tools\Xenko.Core.VisualStudio\Xenko.Core.VisualStudio.projitems*{2fca2d8b-b10f-4dca-9847-4221f74ba586}*SharedItemsImports = 5
 		..\sources\shared\Xenko.Core.ShellHelper\Xenko.Core.ShellHelper.projitems*{39ae9c77-e94b-404f-8768-b6261b3c1e0e}*SharedItemsImports = 5
 		..\sources\shared\Xenko.Core.ShellHelper\Xenko.Core.ShellHelper.projitems*{3a3cb33c-64d9-4948-86c1-0d86320d23c3}*SharedItemsImports = 13
 		..\sources\shared\Xenko.NuGetResolver\Xenko.NuGetResolver.projitems*{50d1a3bb-4b41-4ef5-8d2f-3618a3b6c698}*SharedItemsImports = 5
-		..\sources\tools\Xenko.Core.VisualStudio\Xenko.Core.VisualStudio.projitems*{50d1a3bb-4b41-4ef5-8d2f-3618a3b6c698}*SharedItemsImports = 5
 		..\sources\editor\Xenko.Core.MostRecentlyUsedFiles\Xenko.Core.MostRecentlyUsedFiles.projitems*{5863574d-7a55-49bc-8e65-babb74d8e66e}*SharedItemsImports = 5
-		..\sources\tools\Xenko.Core.VisualStudio\Xenko.Core.VisualStudio.projitems*{5e241be1-ffb6-49f2-98b4-7869ba7d9f5a}*SharedItemsImports = 5
 		..\sources\editor\Xenko.PrivacyPolicy\Xenko.PrivacyPolicy.projitems*{950badd0-ad5a-4f58-87ec-4adaecbea89b}*SharedItemsImports = 13
-		..\sources\tools\Xenko.Core.VisualStudio\Xenko.Core.VisualStudio.projitems*{991e796a-d1d1-48b8-b9aa-95c2744fe112}*SharedItemsImports = 13
 		..\sources\editor\Xenko.Core.MostRecentlyUsedFiles\Xenko.Core.MostRecentlyUsedFiles.projitems*{9ac6d791-811e-4d6a-b08e-93f0093ef268}*SharedItemsImports = 13
 		..\sources\editor\Xenko.Editor.CrashReport\Xenko.Editor.CrashReport.projitems*{ab574f65-1402-4476-9314-74dcdaf19097}*SharedItemsImports = 13
 		..\sources\engine\Xenko.Shared\Refactor\Xenko.Refactor.projitems*{b33e576f-2279-4bfc-a438-d9b84343b56b}*SharedItemsImports = 13
@@ -427,16 +367,6 @@ Global
 		{42780CBD-3FE7-48E3-BD5B-59945EA20137}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{42780CBD-3FE7-48E3-BD5B-59945EA20137}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{42780CBD-3FE7-48E3-BD5B-59945EA20137}.Release|Win32.ActiveCfg = Release|Any CPU
-		{0BD41ADD-2704-4A77-A9AB-15460A2ABDC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0BD41ADD-2704-4A77-A9AB-15460A2ABDC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0BD41ADD-2704-4A77-A9AB-15460A2ABDC6}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{0BD41ADD-2704-4A77-A9AB-15460A2ABDC6}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{0BD41ADD-2704-4A77-A9AB-15460A2ABDC6}.Debug|Win32.ActiveCfg = Debug|Any CPU
-		{0BD41ADD-2704-4A77-A9AB-15460A2ABDC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0BD41ADD-2704-4A77-A9AB-15460A2ABDC6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0BD41ADD-2704-4A77-A9AB-15460A2ABDC6}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{0BD41ADD-2704-4A77-A9AB-15460A2ABDC6}.Release|Mixed Platforms.Build.0 = Release|Any CPU
-		{0BD41ADD-2704-4A77-A9AB-15460A2ABDC6}.Release|Win32.ActiveCfg = Release|Any CPU
 		{7F7BFF79-C400-435F-B359-56A2EF8956E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7F7BFF79-C400-435F-B359-56A2EF8956E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7F7BFF79-C400-435F-B359-56A2EF8956E0}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
@@ -759,16 +689,6 @@ Global
 		{862C7C39-8E2B-4F18-88E9-ACD6EDF818CD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{862C7C39-8E2B-4F18-88E9-ACD6EDF818CD}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{862C7C39-8E2B-4F18-88E9-ACD6EDF818CD}.Release|Win32.ActiveCfg = Release|Any CPU
-		{E136B568-3E3F-498F-A8B4-2877B7768560}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E136B568-3E3F-498F-A8B4-2877B7768560}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E136B568-3E3F-498F-A8B4-2877B7768560}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{E136B568-3E3F-498F-A8B4-2877B7768560}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{E136B568-3E3F-498F-A8B4-2877B7768560}.Debug|Win32.ActiveCfg = Debug|Any CPU
-		{E136B568-3E3F-498F-A8B4-2877B7768560}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E136B568-3E3F-498F-A8B4-2877B7768560}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E136B568-3E3F-498F-A8B4-2877B7768560}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{E136B568-3E3F-498F-A8B4-2877B7768560}.Release|Mixed Platforms.Build.0 = Release|Any CPU
-		{E136B568-3E3F-498F-A8B4-2877B7768560}.Release|Win32.ActiveCfg = Release|Any CPU
 		{DD592516-B341-40FE-9100-1B0FA784A060}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DD592516-B341-40FE-9100-1B0FA784A060}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DD592516-B341-40FE-9100-1B0FA784A060}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
@@ -985,18 +905,6 @@ Global
 		{7C67FF28-1B9E-4F13-8BDA-B833D588BC6A}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{7C67FF28-1B9E-4F13-8BDA-B833D588BC6A}.Release|Win32.ActiveCfg = Release|Any CPU
 		{7C67FF28-1B9E-4F13-8BDA-B833D588BC6A}.Release|Win32.Build.0 = Release|Any CPU
-		{AF6049CC-E60E-4174-9AB6-9AA282DE3A31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AF6049CC-E60E-4174-9AB6-9AA282DE3A31}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AF6049CC-E60E-4174-9AB6-9AA282DE3A31}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{AF6049CC-E60E-4174-9AB6-9AA282DE3A31}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{AF6049CC-E60E-4174-9AB6-9AA282DE3A31}.Debug|Win32.ActiveCfg = Debug|Any CPU
-		{AF6049CC-E60E-4174-9AB6-9AA282DE3A31}.Debug|Win32.Build.0 = Debug|Any CPU
-		{AF6049CC-E60E-4174-9AB6-9AA282DE3A31}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AF6049CC-E60E-4174-9AB6-9AA282DE3A31}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AF6049CC-E60E-4174-9AB6-9AA282DE3A31}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{AF6049CC-E60E-4174-9AB6-9AA282DE3A31}.Release|Mixed Platforms.Build.0 = Release|Any CPU
-		{AF6049CC-E60E-4174-9AB6-9AA282DE3A31}.Release|Win32.ActiveCfg = Release|Any CPU
-		{AF6049CC-E60E-4174-9AB6-9AA282DE3A31}.Release|Win32.Build.0 = Release|Any CPU
 		{6A7B231E-36AA-4647-8C1A-FB1540ABC813}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6A7B231E-36AA-4647-8C1A-FB1540ABC813}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6A7B231E-36AA-4647-8C1A-FB1540ABC813}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
@@ -1091,6 +999,18 @@ Global
 		{66BE41FC-FC52-48D0-9C04-BCE8CC393020}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{66BE41FC-FC52-48D0-9C04-BCE8CC393020}.Release|Win32.ActiveCfg = Release|Any CPU
 		{66BE41FC-FC52-48D0-9C04-BCE8CC393020}.Release|Win32.Build.0 = Release|Any CPU
+		{7FA381C8-8EBE-4515-969D-01369CC47D0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FA381C8-8EBE-4515-969D-01369CC47D0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FA381C8-8EBE-4515-969D-01369CC47D0E}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{7FA381C8-8EBE-4515-969D-01369CC47D0E}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{7FA381C8-8EBE-4515-969D-01369CC47D0E}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{7FA381C8-8EBE-4515-969D-01369CC47D0E}.Debug|Win32.Build.0 = Debug|Any CPU
+		{7FA381C8-8EBE-4515-969D-01369CC47D0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FA381C8-8EBE-4515-969D-01369CC47D0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7FA381C8-8EBE-4515-969D-01369CC47D0E}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{7FA381C8-8EBE-4515-969D-01369CC47D0E}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{7FA381C8-8EBE-4515-969D-01369CC47D0E}.Release|Win32.ActiveCfg = Release|Any CPU
+		{7FA381C8-8EBE-4515-969D-01369CC47D0E}.Release|Win32.Build.0 = Release|Any CPU
 		{42F46D75-ED70-46B4-8B0F-BAB923E3AC59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{42F46D75-ED70-46B4-8B0F-BAB923E3AC59}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{42F46D75-ED70-46B4-8B0F-BAB923E3AC59}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
@@ -1122,7 +1042,6 @@ Global
 		{C2306552-6C42-464C-8981-32FEF4F9458D} = {6F473FA6-4F8B-4FBA-AE33-EE5AF997D50C}
 		{D81F5C91-D7DB-46E5-BC99-49488FB6814C} = {10D145AF-C8AE-428F-A80F-CA1B591D0DB2}
 		{42780CBD-3FE7-48E3-BD5B-59945EA20137} = {4C142567-C42B-40F5-B092-798882190209}
-		{0BD41ADD-2704-4A77-A9AB-15460A2ABDC6} = {E4508D15-6503-4A29-ADC4-27B3A5E99545}
 		{7F7BFF79-C400-435F-B359-56A2EF8956E0} = {4A15BAAD-AA37-4754-A2BF-8D4049211E36}
 		{C485CE61-3006-4C99-ACB3-A737F5CEBAE7} = {4A15BAAD-AA37-4754-A2BF-8D4049211E36}
 		{4B299721-18EA-4B6D-AFD5-2D6E188B97BD} = {860946E4-CC77-4FDA-A4FD-3DB2A502A696}
@@ -1156,7 +1075,6 @@ Global
 		{2E2382F7-9576-49F0-AE43-93AFD7DB2368} = {860946E4-CC77-4FDA-A4FD-3DB2A502A696}
 		{550C1B7C-B7AD-46DF-ACF3-C36AEF35D5FF} = {5D2D3BE8-9910-45CA-8E45-95660DA4C563}
 		{862C7C39-8E2B-4F18-88E9-ACD6EDF818CD} = {860946E4-CC77-4FDA-A4FD-3DB2A502A696}
-		{E136B568-3E3F-498F-A8B4-2877B7768560} = {E4508D15-6503-4A29-ADC4-27B3A5E99545}
 		{DD592516-B341-40FE-9100-1B0FA784A060} = {4C142567-C42B-40F5-B092-798882190209}
 		{4FAC003A-2532-42F3-AED7-A296D1A1615E} = {75A820AB-0F21-40F2-9448-5D7F495B97A0}
 		{FDF801D9-90CC-4CBD-9F53-7F32F7EDF4F1} = {860946E4-CC77-4FDA-A4FD-3DB2A502A696}
@@ -1177,12 +1095,10 @@ Global
 		{0BE7189B-F04E-4C0C-BBE9-F347C0A59FEE} = {25F10A0B-7259-404C-86BE-FD2363C92F72}
 		{1123EAAD-3FE3-4FD8-8DF6-4DDCF13EFCFB} = {A2A4342E-024B-4063-B10C-1DA96CA3046D}
 		{53782603-3096-40C2-ABD3-F8F311BAE4BE} = {4C142567-C42B-40F5-B092-798882190209}
-		{991E796A-D1D1-48B8-B9AA-95C2744FE112} = {E4508D15-6503-4A29-ADC4-27B3A5E99545}
 		{FB9ED2C4-94A0-4004-A498-3F29A9D5BB5D} = {A2A4342E-024B-4063-B10C-1DA96CA3046D}
 		{FBE1FA7B-E699-4BB2-9C8F-41F4C9F3F088} = {4C142567-C42B-40F5-B092-798882190209}
 		{BD176B28-49CD-4FAD-A430-CDBCF1C2E514} = {1AE1AC60-5D2F-4CA7-AE20-888F44551185}
 		{7C67FF28-1B9E-4F13-8BDA-B833D588BC6A} = {25F10A0B-7259-404C-86BE-FD2363C92F72}
-		{AF6049CC-E60E-4174-9AB6-9AA282DE3A31} = {E4508D15-6503-4A29-ADC4-27B3A5E99545}
 		{6A7B231E-36AA-4647-8C1A-FB1540ABC813} = {25F10A0B-7259-404C-86BE-FD2363C92F72}
 		{B686C194-D71D-4FF0-8B4F-F53AFBCD962F} = {75A820AB-0F21-40F2-9448-5D7F495B97A0}
 		{164A5B9A-E684-4B3F-9EF4-B7765FC0A8A1} = {1AE1AC60-5D2F-4CA7-AE20-888F44551185}
@@ -1195,6 +1111,7 @@ Global
 		{62E9A8E4-79AF-4081-84D5-FEC5A0B28598} = {FC791F56-C1F1-4C41-A193-868D8197F8E2}
 		{AD4FDC24-B64D-4ED7-91AA-62C9EDA12FA4} = {4C142567-C42B-40F5-B092-798882190209}
 		{66BE41FC-FC52-48D0-9C04-BCE8CC393020} = {4C142567-C42B-40F5-B092-798882190209}
+		{7FA381C8-8EBE-4515-969D-01369CC47D0E} = {1AE1AC60-5D2F-4CA7-AE20-888F44551185}
 		{42F46D75-ED70-46B4-8B0F-BAB923E3AC59} = {4C142567-C42B-40F5-B092-798882190209}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution

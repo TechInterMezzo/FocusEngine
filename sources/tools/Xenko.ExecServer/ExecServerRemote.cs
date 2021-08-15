@@ -7,16 +7,16 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Reflection;
-using System.ServiceModel;
 using System.Threading;
-using Xenko.Core.VisualStudio;
+using ServiceWire.NamedPipes;
+using static Xenko.ExecServer.AppDomainShadow;
+using static Xenko.ExecServer.ExecServerApp;
 
 namespace Xenko.ExecServer
 {
     /// <summary>
-    /// Remote implementation of the server
+    /// Remote implementation of the ServiceWire server
     /// </summary>
-    [ServiceBehavior(InstanceContextMode = InstanceContextMode.Single, ConcurrencyMode=ConcurrencyMode.Multiple)]
     internal class ExecServerRemote : IExecServerRemote
     {
         public const int BusyReturnCode = -8000;
@@ -65,7 +65,7 @@ namespace Xenko.ExecServer
         {
         }
 
-        public int Run(string currentDirectory, Dictionary<string, string> environmentVariables, string[] args, bool shadowCache, int? debuggerProcessId)
+        public int Run(string currentDirectory, Dictionary<string, string> environmentVariables, string[] args, bool shadowCache, int? debuggerProcessId, string callbackAddress)
         {
             bool lockTaken = false;
             try
@@ -82,17 +82,11 @@ namespace Xenko.ExecServer
 
                 upTime.Restart();
 
-                if (debuggerProcessId.HasValue && !Debugger.IsAttached)
+                using (var callbackChannel = new NpClient<IServerLogger>(new NpEndPoint(callbackAddress)))
                 {
-                    using (var debugger = VisualStudioDebugger.GetByProcess(debuggerProcessId.Value))
-                    {
-                        debugger?.Attach();
-                    }
+                    var result = shadowManager.Run(currentDirectory, environmentVariables, args, shadowCache, callbackChannel);
+                    return result;
                 }
-
-                var logger = OperationContext.Current.GetCallbackChannel<IServerLogger>();
-                var result = shadowManager.Run(currentDirectory, environmentVariables, args, shadowCache, logger);
-                return result;
             }
             finally
             {
