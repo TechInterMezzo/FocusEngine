@@ -26,8 +26,9 @@ namespace Xenko.Core.Diagnostics
                 }
                 catch (Exception e)
                 {
-                    Log.Fatal("Unexpected exception", e, CallerInfo.Get(sourceFilePath, memberName, sourceLineNumber));
-                    throw;
+                    // BYPASS FOR NOW
+                    //Log.Fatal("Unexpected exception", e, CallerInfo.Get(sourceFilePath, memberName, sourceLineNumber));
+                    //throw;
                 }
             };
         }
