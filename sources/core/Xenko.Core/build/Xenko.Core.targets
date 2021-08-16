@@ -50,8 +50,8 @@
     <TempFolder>$(TEMP)</TempFolder>
     <TempFolder Condition="'$(TempFolder)' == ''">$(TMPDIR)</TempFolder>
     <TempFolder Condition="'$(TempFolder)' == ''">/tmp</TempFolder>
-    
-    <XenkoAssemblyProcessorHash>$([System.IO.File]::ReadAllText('$(XenkoAssemblyProcessorPath).hash'))</XenkoAssemblyProcessorHash>
+
+    <!-- XenkoAssemblyProcessorHash>$([System.IO.File]::ReadAllText('$(XenkoAssemblyProcessorPath).hash'))</XenkoAssemblyProcessorHash -->
     <XenkoAssemblyProcessorTempBasePath>$(TempFolder)\Xenko\AssemblyProcessor\$(XenkoAssemblyProcessorFramework)\$(XenkoAssemblyProcessorHash)\</XenkoAssemblyProcessorTempBasePath>
     <XenkoAssemblyProcessorTempPath>$(XenkoAssemblyProcessorTempBasePath)Xenko.Core.AssemblyProcessor.Packed$(XenkoAssemblyProcessorExt)</XenkoAssemblyProcessorTempPath>
   </PropertyGroup>

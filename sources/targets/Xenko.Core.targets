@@ -98,7 +98,7 @@
 
     <XenkoAssemblyProcessorFramework>netstandard2.0</XenkoAssemblyProcessorFramework>
     <XenkoAssemblyProcessorExt>.dll</XenkoAssemblyProcessorExt>
-    <XenkoAssemblyProcessorHash Condition="'$(XenkoAssemblyProcessorBasePath)' != ''">$([System.IO.File]::ReadAllText('$(XenkoAssemblyProcessorBasePath)\$(XenkoAssemblyProcessorFramework)\Xenko.Core.AssemblyProcessor.Packed$(XenkoAssemblyProcessorExt).hash'))</XenkoAssemblyProcessorHash>
+    <!-- XenkoAssemblyProcessorHash Condition="'$(XenkoAssemblyProcessorBasePath)' != ''">$([System.IO.File]::ReadAllText('$(XenkoAssemblyProcessorBasePath)\$(XenkoAssemblyProcessorFramework)\Xenko.Core.AssemblyProcessor.Packed$(XenkoAssemblyProcessorExt).hash'))</XenkoAssemblyProcessorHash -->
     <XenkoAssemblyProcessorTempBasePath Condition="'$(XenkoAssemblyProcessorBasePath)' != ''">$(TEMP)\Xenko\AssemblyProcessor\$(XenkoAssemblyProcessorHash)\$(XenkoAssemblyProcessorFramework)\</XenkoAssemblyProcessorTempBasePath>
     <XenkoAssemblyProcessorTempPath Condition="'$(XenkoAssemblyProcessorBasePath)' != ''">$(XenkoAssemblyProcessorTempBasePath)Xenko.Core.AssemblyProcessor.Packed$(XenkoAssemblyProcessorExt)</XenkoAssemblyProcessorTempPath>
   </PropertyGroup>

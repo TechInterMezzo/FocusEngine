@@ -54,7 +54,7 @@
     <!-- First try NuGet layout, then git checkout -->
     <XenkoMSBuildTaskSourcePath Condition="Exists('$(MSBuildThisFileDirectory)..\tools\$(XenkoMSBuildTaskTargetFramework)\Xenko.MSBuild.Tasks.dll')">$(MSBuildThisFileDirectory)..\tools\$(XenkoMSBuildTaskTargetFramework)\Xenko.MSBuild.Tasks.dll</XenkoMSBuildTaskSourcePath>
     <XenkoMSBuildTaskSourcePath Condition="Exists('$(MSBuildThisFileDirectory)..\..\..\..\deps\Xenko.MSBuild.Tasks\bin\Release\$(XenkoMSBuildTaskTargetFramework)\Xenko.MSBuild.Tasks.dll')">$(MSBuildThisFileDirectory)..\..\..\..\deps\Xenko.MSBuild.Tasks\bin\Release\$(XenkoMSBuildTaskTargetFramework)\Xenko.MSBuild.Tasks.dll</XenkoMSBuildTaskSourcePath>
-    <XenkoMSBuildTaskAssemblyHash Condition="Exists('$(XenkoMSBuildTaskSourcePath)')">$([System.IO.File]::ReadAllText('$(XenkoMSBuildTaskSourcePath).hash'))</XenkoMSBuildTaskAssemblyHash>
+    <!-- XenkoMSBuildTaskAssemblyHash Condition="Exists('$(XenkoMSBuildTaskSourcePath)')">$([System.IO.File]::ReadAllText('$(XenkoMSBuildTaskSourcePath).hash'))</XenkoMSBuildTaskAssemblyHash -->
     <XenkoMSBuildTaskTempPath>$(TEMP)\Xenko\MSBuildTasks\$(XenkoMSBuildTaskTargetFramework)\Xenko.MSBuild.Tasks-$(XenkoMSBuildTaskAssemblyHash).dll</XenkoMSBuildTaskTempPath>
   </PropertyGroup>
 
